@@ -21,6 +21,6 @@ export async function action({ request }: ActionFunctionArgs) {
   const stream = OpenAIStream(response);
   // Respond with the stream
   const aiResponse = new StreamingTextResponse(stream);
-  console.log("aiResponse", await aiResponse);
+
   return aiResponse;
 }
